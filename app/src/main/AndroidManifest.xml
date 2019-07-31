@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.losya.wdiarypersonal">
+
+    <uses-permission android:name="android.permission.USE_FINGERPRINT"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <application
+            android:name="com.losya.wdiarypersonal.utils.DiaryApplication"
+            android:allowBackup="true"
+            android:icon="@drawable/watermelon1"
+            android:label="@string/app_name"
+            android:supportsRtl="true"
+            android:theme="@style/AppTheme">
+        <activity android:name="com.losya.wdiarypersonal.ui.AuthActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.losya.wdiarypersonal.ui.MainActivity"/>
+        <activity android:name="com.losya.wdiarypersonal.ui.UpdateDiaryActivity"/>
+        <activity android:name="com.losya.wdiarypersonal.ui.MyPreferencesActivity"/>
+        <activity android:name="com.losya.wdiarypersonal.ui.AddDiaryActivity"/>
+        <activity android:name="com.losya.wdiarypersonal.ui.TestActivity">
+        </activity>
+        <activity
+                android:name="com.losya.wdiarypersonal.SettingsActivity"
+                android:label="@string/title_activity_settings">
+        </activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,56 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 28
+    buildToolsVersion '28.0.3'
+
+    defaultConfig {
+        applicationId "com.losya.wdiarypersonal"
+        minSdkVersion 15
+        targetSdkVersion 28
+        versionCode 2
+        versionName "2.0"
+        vectorDrawables.useSupportLibrary = true
+    }
+    buildTypes {
+        release {
+            debuggable false
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+
+    implementation 'com.android.support:support-v4:28.0.0'
+    implementation 'com.android.support:support-vector-drawable:28.0.0'
+    configurations {
+        all*.exclude group: 'com.android.support', module: 'support-v4'
+    }
+
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    testImplementation 'junit:junit:4.12'
+
+//noinspection GradleCompatible
+
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support:design:28.0.0'
+    implementation 'com.orhanobut:logger:1.15'
+    implementation 'com.android.support:cardview-v7:28.0.0'
+    implementation 'com.jakewharton:butterknife:7.0.1'
+    implementation 'com.android.support:support-annotations:28.0.0'
+    implementation 'org.greenrobot:eventbus:3.0.0'
+    implementation 'com.google.code.gson:gson:2.8.0'
+    implementation 'com.android.support:recyclerview-v7:28.0.0'
+    implementation 'com.getbase:floatingactionbutton:1.5.1'
+    implementation 'com.github.clans:fab:1.6.4'
+    implementation 'com.oguzdev:CircularFloatingActionMenu:1.0.2'
+    implementation 'io.github.yavski:fab-speed-dial:1.0.1'
+    implementation 'cc.trity.floatingactionbutton:library:1.0.0'
+    implementation 'com.android.support:preference-v7:25.0.1'
+    debugImplementation 'com.squareup.leakcanary:leakcanary-android:1.5.1'
+    releaseImplementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.1'
+    testImplementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.1'
+    annotationProcessor 'com.jakewharton:butterknife:7.0.1'
+}

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+            android:id="@+id/iconHamburger"
+            android:icon="@drawable/menu"
+            app:showAsAction="ifRoom|withText"
+            android:title="Other"
+    >
+        <menu>
+            <item
+                    android:id="@+id/menuItemSettingsicon"
+                    android:title="Settings"></item>
+            <item
+                    android:id="@+id/menuItemWebsite"
+                    android:title="Website / Status"></item>
+            <item
+                    android:id="@+id/menuItemBugReporting"
+                    android:title="Bug reporting"></item>
+            <item
+                    android:id="@+id/menuItemBeer"
+                    android:title="Donate / Buy me a beer"></item>
+
+        </menu>
+
+    </item>
+</menu>
